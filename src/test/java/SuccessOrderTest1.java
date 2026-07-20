@@ -50,7 +50,7 @@ public class SuccessOrderTest1 {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
     }
-
+    // Автотесты для спринта 4
     @Test
     public void testOrderWithTopButton() {
         MainPageObjects mainPage = new MainPageObjects(driver);

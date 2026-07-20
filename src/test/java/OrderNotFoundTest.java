@@ -14,7 +14,7 @@ import static org.junit.Assert.assertTrue;
 public class OrderNotFoundTest {
 
     private WebDriver driver;
-
+    // Автотесты для спринта 4
     @Before
     public void setup() {
         WebDriverManager.chromedriver().setup();
