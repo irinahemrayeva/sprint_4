@@ -6,8 +6,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import pageObjects.*;
+import pageobjects.*;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -15,7 +14,7 @@ import java.util.Collection;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(Parameterized.class)
-public class SuccessOrderTest1 {
+public class SuccessOrderBottomButtonTest {
 
     private WebDriver driver;
     private String name;
@@ -26,8 +25,8 @@ public class SuccessOrderTest1 {
     private String date;
     private String comment;
 
-    public SuccessOrderTest1(String name, String surname, String address,
-                             String metroStation, String phone, String date, String comment) {
+    public SuccessOrderBottomButtonTest(String name, String surname, String address,
+                                        String metroStation, String phone, String date, String comment) {
         this.name = name;
         this.surname = surname;
         this.address = address;
@@ -40,8 +39,8 @@ public class SuccessOrderTest1 {
     @Parameterized.Parameters
     public static Collection<Object[]> testData() {
         return Arrays.asList(new Object[][]{
-                {"Иван", "Петров", "ул. Ленина 1", "Красносельская", "89001112233", "08.05.2026", ""},
-                {"Мария", "Иванова", "ул. Пушкина 5", "Черкизовская", "89004445566", "10.05.2026", "Домофон не работает"}
+                {"Алексей", "Сидоров", "ул. Гагарина 10", "Сокольники", "89007778899", "12.05.2026", ""},
+                {"Екатерина", "Смирнова", "ул. Тверская 15", "Красносельская", "89009998877", "15.05.2026", "Код домофона 1234"}
         });
     }
 
@@ -52,11 +51,12 @@ public class SuccessOrderTest1 {
     }
     // Автотесты для спринта 4
     @Test
-    public void testOrderWithTopButton() {
+    public void testOrderWithBottomButton() {
         MainPageObjects mainPage = new MainPageObjects(driver);
         mainPage.openYandexSamokatPage();
         mainPage.closeCookieBanner();
-        mainPage.clickTopOrderButton();
+        mainPage.scrollToBottomOrderButton();
+        mainPage.clickBottomOrderButton();
 
         OrderPageObjects orderPage = new OrderPageObjects(driver);
         orderPage.fillOrderForm(name, surname, address, metroStation, phone);
@@ -70,7 +70,7 @@ public class SuccessOrderTest1 {
     }
 
     @After
-    public void tearDown() {
-        driver.quit();
+        public void tearDown() {
+            driver.quit();
         }
 }

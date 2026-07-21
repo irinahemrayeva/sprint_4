@@ -1,4 +1,4 @@
-package pageObjects;
+package pageobjects;
 // Автотесты для спринта 4
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
