@@ -6,14 +6,14 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pageObjects.MainPageObjects;
+import pageobjects.MainPageObjects;
 
 import java.util.Arrays;
 import java.util.Collection;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
+// Автотесты для спринта 4
 @RunWith(Parameterized.class)
 public class FAQListTest {
 

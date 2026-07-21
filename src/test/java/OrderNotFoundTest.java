@@ -4,8 +4,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pageObjects.MainPageObjects;
-import pageObjects.OrderNotFoundObjects;
+import pageobjects.MainPageObjects;
+import pageobjects.OrderNotFoundObjects;
 
 import java.util.concurrent.TimeUnit;
 
@@ -14,7 +14,7 @@ import static org.junit.Assert.assertTrue;
 public class OrderNotFoundTest {
 
     private WebDriver driver;
-
+    // Автотесты для спринта 4
     @Before
     public void setup() {
         WebDriverManager.chromedriver().setup();

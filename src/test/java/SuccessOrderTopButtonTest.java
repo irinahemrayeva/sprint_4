@@ -6,8 +6,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import pageObjects.*;
+import pageobjects.*;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -15,7 +14,7 @@ import java.util.Collection;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(Parameterized.class)
-public class SuccessOrderTest1 {
+public class SuccessOrderTopButtonTest {
 
     private WebDriver driver;
     private String name;
@@ -26,8 +25,8 @@ public class SuccessOrderTest1 {
     private String date;
     private String comment;
 
-    public SuccessOrderTest1(String name, String surname, String address,
-                             String metroStation, String phone, String date, String comment) {
+    public SuccessOrderTopButtonTest(String name, String surname, String address,
+                                     String metroStation, String phone, String date, String comment) {
         this.name = name;
         this.surname = surname;
         this.address = address;
@@ -50,7 +49,7 @@ public class SuccessOrderTest1 {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
     }
-
+    // Автотесты для спринта 4
     @Test
     public void testOrderWithTopButton() {
         MainPageObjects mainPage = new MainPageObjects(driver);
